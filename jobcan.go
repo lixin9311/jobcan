@@ -19,7 +19,7 @@ type Client struct {
 }
 
 func NewClient(cookiefile, username, password string, debug bool) *Client {
-	cjar := NewJar(&cookiejar.Options{Filename: "cookies.json"})
+	cjar := NewJar(&cookiejar.Options{Filename: cookiefile})
 	client := resty.New().SetCookieJar(cjar).
 		SetHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36").
 		SetHeader("sec-ch-ua", `"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"`).
