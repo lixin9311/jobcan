@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/lixin9311/jobcan/internal/jobcan"
+	"github.com/lixin9311/jobcan"
 	"github.com/spf13/cobra"
 )
 
